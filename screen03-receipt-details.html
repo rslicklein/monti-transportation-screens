@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=393">
+<title>03 - Receipt Details</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  width: 393px;
+  height: 852px;
+  background: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+/* Header */
+.header {
+  position: absolute;
+  top: 0; left: 0;
+  width: 390px;
+  height: 60px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E0E0E0;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+.header-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+/* Scanned Receipt Image */
+.receipt-image {
+  position: absolute;
+  top: 76px; left: 55px;
+  width: 280px;
+  height: 200px;
+  background: #E0E0E0;
+  border: 1px solid #999999;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.receipt-image-icon {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+.receipt-image-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #999999;
+  text-align: center;
+  line-height: 1.4;
+}
+/* Field Labels */
+.field-label {
+  position: absolute;
+  left: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+/* Amount Field */
+.amount-field {
+  position: absolute;
+  top: 316px; left: 16px;
+  width: 358px;
+  height: 60px;
+  background: #F5F5F5;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+.amount-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+/* Input Fields */
+.input-field {
+  position: absolute;
+  left: 16px;
+  width: 358px;
+  height: 48px;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #1A1A1A;
+}
+/* Notes Field */
+.notes-field {
+  position: absolute;
+  top: 592px; left: 16px;
+  width: 358px;
+  height: 80px;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+}
+/* Save Button */
+.save-btn {
+  position: absolute;
+  top: 696px; left: 16px;
+  width: 358px;
+  height: 52px;
+  background: #2C5F2D;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(44,95,45,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+/* Delete Link */
+.delete-link {
+  position: absolute;
+  top: 764px;
+  left: 0;
+  width: 393px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #999999;
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <span class="header-title">&larr; Receipt Details</span>
+</div>
+
+<!-- Scanned Receipt Image -->
+<div class="receipt-image">
+  <span class="receipt-image-icon">&#129534;</span>
+  <div class="receipt-image-label">SCANNED<br>RECEIPT</div>
+</div>
+
+<!-- Amount -->
+<div class="field-label" style="top: 292px;">Amount</div>
+<div class="amount-field">
+  <span class="amount-value">$ 250.00</span>
+</div>
+
+<!-- Category -->
+<div class="field-label" style="top: 392px;">Category</div>
+<div class="input-field" style="top: 416px;">Fuel</div>
+
+<!-- Date -->
+<div class="input-field" style="top: 504px;">Feb 21, 2026</div>
+
+<!-- Notes -->
+<div class="field-label" style="top: 568px;">Notes (optional)</div>
+<div class="notes-field">Add notes...</div>
+
+<!-- Save Button -->
+<div class="save-btn">SAVE RECEIPT</div>
+
+<!-- Delete -->
+<div class="delete-link">Delete</div>
+
+</body>
+</html>

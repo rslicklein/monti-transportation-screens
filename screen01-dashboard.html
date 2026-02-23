@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=393">
+<title>01 - Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  width: 393px;
+  height: 852px;
+  background: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+/* Header */
+.header {
+  position: absolute;
+  top: 9px; left: 0;
+  width: 393px;
+  height: 60px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E0E0E0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+.header-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+.header-menu {
+  font-size: 24px;
+  color: #1A1A1A;
+}
+/* Summary Card */
+.summary-card {
+  position: absolute;
+  top: 76px; left: 16px;
+  width: 358px;
+  height: 200px;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
+  padding: 16px 12px;
+}
+.summary-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+.summary-line {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1A1A1A;
+  margin-top: 12px;
+}
+.summary-divider {
+  width: 302px;
+  height: 1px;
+  background: #E0E0E0;
+  margin-top: 12px;
+}
+.summary-profit {
+  font-size: 28px;
+  font-weight: 700;
+  color: #00AA00;
+  margin-top: 16px;
+}
+.summary-margin {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+  margin-top: 4px;
+}
+/* Action Buttons */
+.action-btn {
+  position: absolute;
+  left: 16px;
+  width: 358px;
+  height: 52px;
+  background: #2C5F2D;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(44,95,45,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+/* Section Title */
+.section-title {
+  position: absolute;
+  top: 496px; left: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+/* Receipt Items */
+.receipt-item {
+  position: absolute;
+  left: 16px;
+  width: 358px;
+  height: 56px;
+  background: #F5F5F5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+.receipt-thumb {
+  width: 40px;
+  height: 40px;
+  background: #E0E0E0;
+  border-radius: 4px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+.receipt-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #1A1A1A;
+  flex: 1;
+}
+.receipt-arrow {
+  font-size: 14px;
+  color: #999999;
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <span class="header-title">Monti Transportation</span>
+  <span class="header-menu">&#9776;</span>
+</div>
+
+<!-- Summary Card -->
+<div class="summary-card">
+  <div class="summary-label">THIS WEEK</div>
+  <div class="summary-line">Revenue: $3,500</div>
+  <div class="summary-line" style="margin-top:8px;">Expenses: $1,200</div>
+  <div class="summary-divider"></div>
+  <div class="summary-profit">PROFIT: $2,300</div>
+  <div class="summary-margin">Margin: 65.7%</div>
+</div>
+
+<!-- Action Buttons -->
+<div class="action-btn" style="top: 292px;">SCAN RECEIPT</div>
+<div class="action-btn" style="top: 360px;">CREATE INVOICE</div>
+<div class="action-btn" style="top: 428px;">VIEW EXPENSES</div>
+
+<!-- Recent Receipts -->
+<div class="section-title">Recent Receipts</div>
+
+<div class="receipt-item" style="top: 528px;">
+  <div class="receipt-thumb"></div>
+  <span class="receipt-label">Fuel- $250</span>
+  <span class="receipt-arrow">&gt;</span>
+</div>
+
+<div class="receipt-item" style="top: 596px;">
+  <div class="receipt-thumb"></div>
+  <span class="receipt-label">Toll- $15</span>
+  <span class="receipt-arrow">&gt;</span>
+</div>
+
+<div class="receipt-item" style="top: 664px;">
+  <div class="receipt-thumb"></div>
+  <span class="receipt-label">Food- $42</span>
+  <span class="receipt-arrow">&gt;</span>
+</div>
+
+</body>
+</html>
