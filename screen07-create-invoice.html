@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=393">
+<title>07 - Create Invoice</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  width: 393px;
+  height: 852px;
+  background: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+.header {
+  position: absolute;
+  top: 0; left: 0;
+  width: 390px;
+  height: 60px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E0E0E0;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+.header-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+/* Labels */
+.field-label {
+  position: absolute;
+  left: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+/* FROM Section */
+.from-card {
+  position: absolute;
+  top: 100px; left: 16px;
+  width: 358px;
+  background: #F5F5F5;
+  border-radius: 8px;
+  padding: 16px;
+}
+.from-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 4px;
+}
+.from-address {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.4;
+}
+/* Input Fields */
+.input-field {
+  position: absolute;
+  left: 16px;
+  width: 358px;
+  height: 48px;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+.input-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1A1A1A;
+}
+.input-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: #999999;
+}
+/* Dropdown */
+.dropdown-field {
+  position: absolute;
+  left: 16px;
+  width: 358px;
+  height: 48px;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+.dropdown-arrow {
+  font-size: 12px;
+  color: #666666;
+}
+/* Amount Field */
+.amount-field {
+  position: absolute;
+  left: 16px;
+  width: 358px;
+  height: 60px;
+  background: #F5F5F5;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+.amount-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+/* Attachment Area */
+.attachment-add {
+  position: absolute;
+  left: 16px;
+  width: 358px;
+  height: 52px;
+  background: #FFFFFF;
+  border: 2px dashed #E0E0E0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+}
+.attachment-item {
+  position: absolute;
+  left: 16px;
+  width: 358px;
+  height: 48px;
+  background: #F5F5F5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+.att-thumb {
+  width: 36px;
+  height: 36px;
+  background: #E0E0E0;
+  border-radius: 4px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #999999;
+}
+.att-name {
+  font-size: 14px;
+  font-weight: 400;
+  color: #1A1A1A;
+}
+/* Primary Button */
+.primary-btn {
+  position: absolute;
+  left: 16px;
+  width: 358px;
+  height: 52px;
+  background: #2C5F2D;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(44,95,45,0.25);
+}
+</style>
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <span class="header-title">&larr; Create Invoice</span>
+</div>
+
+<!-- FROM Label -->
+<div class="field-label" style="top: 76px;">FROM</div>
+
+<!-- FROM Card -->
+<div class="from-card">
+  <div class="from-name">Monti Transportation LLC</div>
+  <div class="from-address">123 Main Street<br>Anytown, NJ 07001<br>monti.transport@email.com</div>
+</div>
+
+<!-- TO Label -->
+<div class="field-label" style="top: 210px;">TO</div>
+
+<!-- Client Name Input -->
+<div class="input-field" style="top: 234px;">
+  <span class="input-placeholder">Client Name</span>
+</div>
+
+<!-- Client Email Input -->
+<div class="input-field" style="top: 294px;">
+  <span class="input-placeholder">Client Email</span>
+</div>
+
+<!-- JOB DETAILS Label -->
+<div class="field-label" style="top: 362px;">JOB DETAILS</div>
+
+<!-- Date Dropdown -->
+<div class="dropdown-field" style="top: 386px;">
+  <span class="input-text" style="flex:1;">Feb 20, 2026</span>
+  <span class="dropdown-arrow">&#9660;</span>
+</div>
+
+<!-- Service Input -->
+<div class="input-field" style="top: 446px;">
+  <span class="input-text">Hotshot Delivery</span>
+</div>
+
+<!-- Amount Field -->
+<div class="amount-field" style="top: 506px;">
+  <span class="amount-text">$ 1,500.00</span>
+</div>
+
+<!-- ATTACHMENTS Label -->
+<div class="field-label" style="top: 586px;">ATTACHMENTS</div>
+
+<!-- Add Attachment -->
+<div class="attachment-add" style="top: 610px;">
+  + Add Receipt / POD
+</div>
+
+<!-- Attached Item -->
+<div class="attachment-item" style="top: 674px;">
+  <div class="att-thumb">&#128196;</div>
+  <span class="att-name">delivery_receipt.pdf</span>
+</div>
+
+<!-- Preview Invoice Button -->
+<div class="primary-btn" style="top: 748px;">PREVIEW INVOICE</div>
+
+</body>
+</html>

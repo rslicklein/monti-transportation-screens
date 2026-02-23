@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=393">
+<title>05 - Profit Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  width: 393px;
+  height: 852px;
+  background: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+.header {
+  position: absolute;
+  top: 0; left: 0;
+  width: 390px;
+  height: 60px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E0E0E0;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+.header-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 76px; left: 16px;
+  width: 358px;
+  height: 48px;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+.dropdown-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1A1A1A;
+  flex: 1;
+}
+.dropdown-arrow {
+  font-size: 12px;
+  color: #666666;
+}
+/* Revenue Section */
+.section-label {
+  position: absolute;
+  left: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+.revenue-field {
+  position: absolute;
+  top: 164px; left: 16px;
+  width: 358px;
+  height: 60px;
+  background: #F5F5F5;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+.revenue-amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+/* Minus Symbol */
+.minus-symbol {
+  position: absolute;
+  top: 244px;
+  left: 0;
+  width: 393px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #999999;
+}
+/* Expenses Section */
+.expenses-field {
+  position: absolute;
+  top: 300px; left: 16px;
+  width: 358px;
+  background: #F5F5F5;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 16px;
+}
+.expenses-total {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 12px;
+}
+.expense-line {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+}
+.expense-line::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #666666;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+/* Equals Line */
+.equals-line {
+  position: absolute;
+  top: 490px;
+  left: 16px;
+  width: 358px;
+  height: 3px;
+  background: #1A1A1A;
+}
+/* Profit Display */
+.profit-label {
+  position: absolute;
+  top: 510px;
+  left: 0;
+  width: 393px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #666666;
+  letter-spacing: 2px;
+}
+.profit-amount {
+  position: absolute;
+  top: 536px;
+  left: 0;
+  width: 393px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: #00AA00;
+}
+.profit-margin {
+  position: absolute;
+  top: 596px;
+  left: 0;
+  width: 393px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+}
+/* Margin badge */
+.margin-badge {
+  display: inline-block;
+  background: #F0FFF0;
+  border: 1px solid #00AA00;
+  border-radius: 20px;
+  padding: 4px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #00AA00;
+}
+/* Add Revenue Button */
+.primary-btn {
+  position: absolute;
+  top: 748px;
+  left: 16px;
+  width: 358px;
+  height: 52px;
+  background: #2C5F2D;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(44,95,45,0.25);
+}
+</style>
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <span class="header-title">&larr; Profit Calculator</span>
+</div>
+
+<!-- Time Period Dropdown -->
+<div class="dropdown">
+  <span class="dropdown-text">This Week</span>
+  <span class="dropdown-arrow">&#9660;</span>
+</div>
+
+<!-- Revenue Label -->
+<div class="section-label" style="top: 140px;">Revenue</div>
+
+<!-- Revenue Field -->
+<div class="revenue-field">
+  <span class="revenue-amount">$ 3,500</span>
+</div>
+
+<!-- Minus Symbol -->
+<div class="minus-symbol">&minus;</div>
+
+<!-- Expenses Label -->
+<div class="section-label" style="top: 280px;">Expenses</div>
+
+<!-- Expenses Field with Breakdown -->
+<div class="expenses-field">
+  <div class="expenses-total">$ 1,247</div>
+  <div class="expense-line">Fuel: $850</div>
+  <div class="expense-line">Food: $180</div>
+  <div class="expense-line">Tolls: $120</div>
+  <div class="expense-line">Lodging: $97</div>
+</div>
+
+<!-- Equals Line -->
+<div class="equals-line"></div>
+
+<!-- Profit Label -->
+<div class="profit-label">PROFIT</div>
+
+<!-- Profit Amount -->
+<div class="profit-amount">$ 2,253</div>
+
+<!-- Margin -->
+<div class="profit-margin">
+  <span class="margin-badge">Margin: 64.4%</span>
+</div>
+
+<!-- Add Revenue Button -->
+<div class="primary-btn">ADD REVENUE</div>
+
+</body>
+</html>

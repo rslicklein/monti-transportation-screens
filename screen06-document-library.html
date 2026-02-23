@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=393">
+<title>06 - Document Library</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  width: 393px;
+  height: 852px;
+  background: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+.header {
+  position: absolute;
+  top: 0; left: 0;
+  width: 390px;
+  height: 60px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E0E0E0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+.header-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+.search-icon {
+  font-size: 20px;
+  color: #1A1A1A;
+}
+/* Section Header */
+.section-header {
+  position: absolute;
+  top: 76px;
+  left: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1A1A;
+  letter-spacing: 1px;
+}
+/* Folder Items */
+.folder-item {
+  position: absolute;
+  left: 16px;
+  width: 358px;
+  height: 72px;
+  background: #F5F5F5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+.folder-icon {
+  font-size: 28px;
+  margin-right: 16px;
+  width: 36px;
+  text-align: center;
+}
+.folder-info {
+  flex: 1;
+}
+.folder-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 2px;
+}
+.folder-count {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+}
+.folder-arrow {
+  font-size: 14px;
+  color: #999999;
+}
+/* Export Button */
+.export-btn {
+  position: absolute;
+  top: 748px;
+  left: 16px;
+  width: 358px;
+  height: 52px;
+  background: #FFFFFF;
+  border: 2px solid #2C5F2D;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2C5F2D;
+}
+</style>
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <span class="header-title">&larr; Documents</span>
+  <span class="search-icon">&#128269;</span>
+</div>
+
+<!-- Section Header -->
+<div class="section-header">FOLDERS</div>
+
+<!-- Folder Items -->
+<div class="folder-item" style="top: 108px;">
+  <span class="folder-icon">&#9981;</span>
+  <div class="folder-info">
+    <div class="folder-name">Fuel</div>
+    <div class="folder-count">24 receipts</div>
+  </div>
+  <span class="folder-arrow">&gt;</span>
+</div>
+
+<div class="folder-item" style="top: 192px;">
+  <span class="folder-icon">&#128678;</span>
+  <div class="folder-info">
+    <div class="folder-name">Tolls</div>
+    <div class="folder-count">8 receipts</div>
+  </div>
+  <span class="folder-arrow">&gt;</span>
+</div>
+
+<div class="folder-item" style="top: 276px;">
+  <span class="folder-icon">&#127828;</span>
+  <div class="folder-info">
+    <div class="folder-name">Food</div>
+    <div class="folder-count">15 receipts</div>
+  </div>
+  <span class="folder-arrow">&gt;</span>
+</div>
+
+<div class="folder-item" style="top: 360px;">
+  <span class="folder-icon">&#127976;</span>
+  <div class="folder-info">
+    <div class="folder-name">Lodging</div>
+    <div class="folder-count">6 receipts</div>
+  </div>
+  <span class="folder-arrow">&gt;</span>
+</div>
+
+<div class="folder-item" style="top: 444px;">
+  <span class="folder-icon">&#128295;</span>
+  <div class="folder-info">
+    <div class="folder-name">Maintenance</div>
+    <div class="folder-count">3 receipts</div>
+  </div>
+  <span class="folder-arrow">&gt;</span>
+</div>
+
+<div class="folder-item" style="top: 528px;">
+  <span class="folder-icon">&#128196;</span>
+  <div class="folder-info">
+    <div class="folder-name">Invoices</div>
+    <div class="folder-count">12 sent</div>
+  </div>
+  <span class="folder-arrow">&gt;</span>
+</div>
+
+<!-- Export Button -->
+<div class="export-btn">EXPORT ALL PDFs</div>
+
+</body>
+</html>

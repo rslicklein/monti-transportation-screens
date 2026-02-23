@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=393">
+<title>08 - Invoice Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  width: 393px;
+  height: 852px;
+  background: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+.header {
+  position: absolute;
+  top: 0; left: 0;
+  width: 390px;
+  height: 60px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E0E0E0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+.header-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+.edit-link {
+  font-size: 14px;
+  font-weight: 400;
+  color: #2C5F2D;
+}
+/* Invoice Preview Card */
+.invoice-card {
+  position: absolute;
+  top: 76px; left: 16px;
+  width: 358px;
+  height: 440px;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+.invoice-number {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2C5F2D;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #E0E0E0;
+}
+.invoice-section {
+  margin-bottom: 20px;
+}
+.invoice-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #999999;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.invoice-value {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1A1A1A;
+}
+.invoice-value-bold {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+.invoice-divider {
+  width: 100%;
+  height: 1px;
+  background: #E0E0E0;
+  margin: 16px 0;
+}
+.invoice-amount-section {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 2px solid #1A1A1A;
+}
+.invoice-amount-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 4px;
+}
+.invoice-amount {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2C5F2D;
+}
+.invoice-attachment {
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #666666;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+/* Send Via Section */
+.send-label {
+  position: absolute;
+  top: 536px;
+  left: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1A1A;
+  letter-spacing: 1px;
+}
+/* Send Buttons */
+.send-primary {
+  position: absolute;
+  left: 16px;
+  width: 358px;
+  height: 52px;
+  background: #2C5F2D;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(44,95,45,0.25);
+  gap: 8px;
+}
+.send-secondary {
+  position: absolute;
+  width: 170px;
+  height: 52px;
+  background: #FFFFFF;
+  border: 2px solid #2C5F2D;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2C5F2D;
+  gap: 8px;
+}
+</style>
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <span class="header-title">&larr; Invoice Preview</span>
+  <span class="edit-link">Edit</span>
+</div>
+
+<!-- Invoice Preview Card -->
+<div class="invoice-card">
+  <div class="invoice-number">INVOICE #001</div>
+
+  <div class="invoice-section">
+    <div class="invoice-label">FROM</div>
+    <div class="invoice-value-bold">Monti Transportation LLC</div>
+    <div class="invoice-value" style="color:#666666; font-size:14px;">123 Main Street, Anytown, NJ</div>
+  </div>
+
+  <div class="invoice-section">
+    <div class="invoice-label">TO</div>
+    <div class="invoice-value-bold">ABC Company</div>
+    <div class="invoice-value" style="color:#666666; font-size:14px;">contact@abccompany.com</div>
+  </div>
+
+  <div class="invoice-divider"></div>
+
+  <div class="invoice-section" style="display:flex; gap:40px;">
+    <div>
+      <div class="invoice-label">SERVICE</div>
+      <div class="invoice-value">Hotshot Delivery</div>
+    </div>
+    <div>
+      <div class="invoice-label">DATE</div>
+      <div class="invoice-value">Feb 20, 2026</div>
+    </div>
+  </div>
+
+  <div class="invoice-amount-section">
+    <div class="invoice-amount-label">AMOUNT DUE</div>
+    <div class="invoice-amount">$ 1,500.00</div>
+  </div>
+
+  <div class="invoice-attachment">
+    &#128206; POD attached
+  </div>
+</div>
+
+<!-- Send Via Label -->
+<div class="send-label">SEND VIA:</div>
+
+<!-- Email Button (Primary) -->
+<div class="send-primary" style="top: 568px;">
+  &#9993; Email
+</div>
+
+<!-- Text Button (Secondary) -->
+<div class="send-secondary" style="top: 636px; left: 16px;">
+  &#128172; Text
+</div>
+
+<!-- Copy Link Button (Secondary) -->
+<div class="send-secondary" style="top: 636px; left: 204px;">
+  &#128279; Copy Link
+</div>
+
+</body>
+</html>
